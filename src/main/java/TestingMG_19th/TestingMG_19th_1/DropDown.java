@@ -29,18 +29,17 @@ public class DropDown {
 		 //drpelem.selectByVisibleText("Appliances");
 		
 		 //driver.findElement(By.className("nav-input nav-progressive-attribute")).click();
-		
-		List<WebElement> options = drpelem.getOptions();
-		System.out.println("number of elements in:" + options.size());  // print number of options
-		
-		for(int i = 0; i < options.size(); i++) { //printing the list of options
-			System.out.println(options.get(i).getText());
-		}
-		
-		WebElement SearchButton = driver.findElement(By.id("nav-search-submit-button"));
-		SearchButton.click();
-	
-
+//		
+//		List<WebElement> options = drpelem.getOptions();
+//		System.out.println("number of elements in:" + options.size());  // print number of options
+//		
+//		for(int i = 0; i < options.size(); i++) { //printing the list of options
+//			System.out.println(options.get(i).getText());
+//		}
+//		
+//		WebElement SearchButton = driver.findElement(By.id("nav-search-submit-button"));
+//		SearchButton.click();
+//		
 	}
 }
 

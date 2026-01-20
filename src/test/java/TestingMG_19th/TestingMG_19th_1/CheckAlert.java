@@ -3,6 +3,7 @@ package TestingMG_19th.TestingMG_19th_1;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,25 +22,33 @@ public class CheckAlert {
 		WebElement LoginButton = driver.findElement(By.xpath("//button[@name='proceed']"));
 		LoginButton.click();
 		
-		ssc.init(driver);
-		String actAlert = ssc.Extract_Alert_message();
-		System.out.println("Alert message is : " + " " + actAlert);
+		Alert alert = driver.switchTo().alert(); // switch to alert
+		String alertMessage = driver.switchTo().alert().getText(); // capture alert message
+		System.out.println(alertMessage); // Print Alert Message
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		alert.accept(); // Accept the alert
+	
 		
+		
+		
+			
+//		ssc.init(driver);
+//		String actAlert = ssc.Extract_Alert_message();
+//		System.out.println("Alert message is : " + " " + actAlert);
+//		
 		
 //		public String Extract_Alert_Message() throws InterruptedException {
 //			ssc.init(driver);
 //			String actAlert = ssc.Extract_Alert_message();
 //			System.out.println("Alert message is : " + " " + actAlert);
 //			
-//		}
-		
-		
-		
-		
-		
-		
-		
-		
+//		}		
 //		
 //		 driver.findElement(By.xpath("//option[@value='search-alias=appliances']")).click();
 //		
